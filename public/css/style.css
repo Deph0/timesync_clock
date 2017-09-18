@@ -18,3 +18,10 @@ body {
   font-size: 15vw;
   z-index: 1;
 }
+#timeDate {
+  position: fixed;
+  bottom: 2vw;
+  left: 4%;
+  font-size: 5vw;
+  z-index: 1;
+}
