@@ -10,8 +10,9 @@ function displayTime() {
   var thm = document.getElementById("timeHourMinute");
   var tis = document.getElementById("timeSeconds");
   var td = document.getElementById("timeDate");
-  thm.innerHTML = date.toLocaleTimeString('sv-SE', {hour: '2-digit', minute:'2-digit'});
-  tis.innerHTML = date.toLocaleTimeString('sv-SE').slice(-2);
+  var timeconf = {timeZone: 'Europe/Stockholm', hour: '2-digit', minute:'2-digit', second: '2-digit'};
+  thm.innerHTML = date.toLocaleTimeString('sv-SE', timeconf);
+  tis.innerHTML = date.toLocaleTimeString('sv-SE', timeconf).slice(-2);
   //tis.innerHTML = date.toLocaleTimeString('en-US',{second:'2-digit'});
   //tis.innerHTML = addZero(date.getSeconds());
   var options = { weekday: 'long', year: 'numeric', month: '2-digit', day: '2-digit' }; 
